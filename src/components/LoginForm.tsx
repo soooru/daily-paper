@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useAuthContext } from '../contexts/AuthContext';
 
 interface LoginFormProps {
@@ -8,7 +8,7 @@ interface LoginFormProps {
 const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
-  
+
   const { handleLogin, loading, error } = useAuthContext();
 
   const handleSubmit = async (event: React.FormEvent) => {
@@ -22,31 +22,31 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
   };
   return (
     <div>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="username">Username:</label>
-            <input
-              type="text"
-              id="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="password">Password:</label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          {loading && <p>Loading...</p>}
-          {error && <p>{error}</p>}
-          <button type="submit" disabled={loading}>Login</button>
-        </form>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        {loading && <p>Loading...</p>}
+        {error && <p>{error}</p>}
+        <button type="submit" disabled={loading}>Login</button>
+      </form>
     </div>
   );
 };

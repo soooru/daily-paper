@@ -20,7 +20,7 @@ const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   useEffect(() => {
     const currentUser = handleCheckUser();
     setUser(currentUser);
-        console.log('AuthProvider useEffect',currentUser)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -10,8 +10,9 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
+    <div className="pt-10 text-center">
+      <h1>접근하기 위해서는 로그인이 필요합니다.</h1>
+      <p>로그인 후 이용해 주세요</p>
       <LoginForm onLoginSuccess={handleLoginSuccess} />
     </div>
   );
