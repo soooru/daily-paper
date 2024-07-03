@@ -9,12 +9,13 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
 
-  const { handleLogin, loading, error } = useAuthContext();
+  const { setUser, handleLogin, loading, error } = useAuthContext();
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     const result = await handleLogin(username, password);
     if (result.success) {
+      setUser({ id: username });
       onLoginSuccess();
     } else {
       alert(result.message);

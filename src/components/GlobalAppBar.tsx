@@ -27,7 +27,7 @@ const GlobalAppBar: React.FC = () => {
     const [dialogOpen, setDialogOpen] = useState(false);
 
     useEffect(() => {
-        console.log('ProtectedRoute useEffect - user:', user);
+        console.log('GlobalAppBar useEffect - user:', user);
     }, [user]);
 
     const handleOpenDrawer = (event: React.MouseEvent<HTMLElement>) => {
