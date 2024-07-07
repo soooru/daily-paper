@@ -1,0 +1,44 @@
+/* src/components/ImageComponent.module.css */
+.imageContainer {
+  text-align: center;
+  img {
+    max-width: 360px;
+    height: auto;
+  }
+}
+.writeRule {
+  position: relative;
+  padding-left: 30px;
+
+  .ruleItem {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -31px;
+      top: 0px;
+      width: 12px;
+      height: 12px;
+      background-color: #a2dfdb;
+      border-radius: 50%;
+      border: 2px solid #a2dfdb;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: -24px;
+      top: 12px;
+      bottom: -20px;
+      width: 2px;
+      background-color: #a2dfdb;
+    }
+
+    &:last-child::after {
+      content: none;
+    }
+  }
+}

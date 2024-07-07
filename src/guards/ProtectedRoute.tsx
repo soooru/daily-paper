@@ -10,12 +10,13 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
   const { user } = useAuthContext();
   const location = useLocation();
 
+
   useEffect(() => {
     console.log('ProtectedRoute useEffect - user:', user);
   }, [user]);
 
   if (!user) {
-    return <Navigate to="/login" state={{ from: location }} />;
+    return <Navigate to="/error?type=auth" state={{ from: location }} />;
   }
 
   return <>{children}</>;

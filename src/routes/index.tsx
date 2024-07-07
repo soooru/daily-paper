@@ -26,6 +26,8 @@ const AppRoutes: React.FC = () => {
               </ProtectedRoute>
             }
           />
+
+          <Route path="/error" element={<ErrorPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>

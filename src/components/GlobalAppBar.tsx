@@ -61,7 +61,7 @@ const GlobalAppBar: React.FC = () => {
                 </Box>
                 <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} className="app-pc-bar d-flex-center-between">
                     <div className="d-flex">
-                        <div>PC로고</div>
+                        <div onClick={() => { handleNavigation({ title: 'home', url: '/' }) }}>PC로고</div>
                         <ul className="ml-10 d-flex">
                             {pages.map((page, index) => (
                                 <li className="mr-4 cursor-pointer" key={index} onClick={() => handleNavigation(page)}>

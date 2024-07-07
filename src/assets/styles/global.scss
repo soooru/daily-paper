@@ -1,5 +1,12 @@
 @import '_variables.scss';
 
+// media query
+@mixin for-phone {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -56,13 +63,20 @@ li {
   justify-content: center;
   align-items: center;
 }
-
-//align
-.text-center {
-  text-align: center;
+.grow-1 {
+  flex-grow: 1;
+}
+// d-block-phone 클래스를 정의
+.d-block-phone {
+  @include for-phone {
+    display: block;
+  }
 }
 
 // spacing
+.page-contents {
+  padding: 16px;
+}
 @each $key, $value in $spacing-values {
   .ma-#{$key} {
     margin: $value;
@@ -79,6 +93,14 @@ li {
   .mb-#{$key} {
     margin-bottom: $value;
   }
+  .mx-#{$key} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+  .my-#{$key} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
   .pa-#{$key} {
     padding: $value;
   }
@@ -92,6 +114,14 @@ li {
     padding-top: $value;
   }
   .pb-#{$key} {
+    padding-bottom: $value;
+  }
+  .px-#{$key} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+  .py-#{$key} {
+    padding-top: $value;
     padding-bottom: $value;
   }
 }
@@ -112,9 +142,40 @@ li {
 .border-left {
   border-left: 1px solid $border-color;
 }
+.border-box {
+  box-sizing: border-box;
+  border: 1px solid $border-color;
+}
+.border-radius-xs {
+  border-radius: 4px;
+}
+.border-radius-sm {
+  border-radius: 8px;
+}
 
 // mouseevent
 .cursor-pointer:hover {
   cursor: pointer;
   color: $point-blue-color;
+}
+
+// text
+.text-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.text-small {
+  font-size: 0.8rem;
+}
+.text-center {
+  text-align: center;
+}
+.text-bg-active {
+  background-color: $point-mint-color;
+}
+
+// bg
+
+.bg-light-teal {
+  background-color: #e0f2f1;
 }
