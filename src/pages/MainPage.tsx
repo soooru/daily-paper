@@ -48,6 +48,21 @@ const MainPage: React.FC = () => {
       </div>
       <div className="py-4">
         <div className="bg-light-teal py-2 px-3 border-radius-sm mb-4">
+          과거 당신의 생각 조각들
+        </div>
+        <div>
+          <div>점심 메뉴에 관한 고찰</div>
+          <div>장마가 길어지는 날</div>
+        </div>
+      </div>
+      <div className="py-4">
+        <div className="bg-light-teal py-2 px-3 border-radius-sm mb-4">
+          오늘, 시작하는 단어
+        </div>
+        <div>편의점 우산, 일회용 우비, 민트 캔디, 익지 않은 과일, 비어있는 파우치, 인공위성의 궤도, 저속 노화</div>
+      </div>
+      <div className="py-4">
+        <div className="bg-light-teal py-2 px-3 border-radius-sm mb-4">
           서비스에 영감을 준 책
         </div>
         <strong>'모닝 페이지 쓰기'</strong><br /><br />
@@ -58,7 +73,6 @@ const MainPage: React.FC = () => {
       </div>
       <span className="text-small text-bg-active">[발췌] 아티스트 웨이(The Artist's Way) | 줄리아 카메론</span>
       <div className="text-small mt-4">* 이 서비스는 서비스 개발자의 개인 토이프로젝트/포트폴리오용으로 제작되었으며, 상업적 이익을 추구하지 않습니다. </div>
-
     </div >
   )
 };

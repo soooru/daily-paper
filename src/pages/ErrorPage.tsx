@@ -13,8 +13,8 @@ const NotFoundPage: React.FC = () => {
 
     useEffect(() => {
         if (errorType === 'auth') {
-            setTitle('접근 권한이 없습니다.');
-            setDesc('로그인 후 이용 가능한 페이지입니다.');
+            setTitle('로그인 후 이용 가능한 페이지입니다.');
+            setDesc('우측 상단 로그인 버튼을 클릭하여 로그인해 주세요.');
         } else {
             setTitle('존재하지 않는 페이지입니다.');
             setDesc('페이지 경로가 잘못 되었을 수 있습니다.');
