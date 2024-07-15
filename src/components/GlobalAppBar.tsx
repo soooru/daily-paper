@@ -17,8 +17,8 @@ interface PageType {
 
 const pages: PageType[] = [
     { title: '작성하기', url: '/write' },
-    { title: '데일리 페이퍼', url: '/papers' },
-    { title: '기록', url: '/calender' },
+    { title: '전체목록', url: '/papers' },
+    { title: '기록달력', url: '/calender' },
 ];
 
 const GlobalAppBar: React.FC = () => {
